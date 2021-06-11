@@ -35,8 +35,8 @@ if(get_theme_mod( 'linkedin')){
 </div><!-- #content -->
 
 	<footer class="site-footer">
-		<div class="site-footer__inner row content-block ">
-			<div class="col-md-4 site-footer__item site-footer__left ">
+		<div class="site-footer__inner content-block ">
+			<div class=" site-footer__item site-footer__left ">
 
 				<div class="site-footer__logo">
 					<?php get_template_part( 'svg-template/svg', 'logo-white' ) ?>
@@ -44,7 +44,7 @@ if(get_theme_mod( 'linkedin')){
 			
 			</div>
 
-			<div class="col-md-4 site-footer__item site-footer__center ">
+			<div class="site-footer__item site-footer__center ">
 
 				<h5>Registerd office</h5>
 
@@ -58,7 +58,7 @@ if(get_theme_mod( 'linkedin')){
 
 			</div>
 			
-			<div class="col-md-4 site-footer__item site-footer__right">
+			<div class="site-footer__item site-footer__right">
 
 				<h5>GET IN TOUCH</h5>
 
@@ -75,7 +75,7 @@ if(get_theme_mod( 'linkedin')){
 
 			</div>
 		</div>
-		<div class="site-footer__footer">
+		<div class="site-footer__footer content-block">
 			<div class="site-footer__legal">
 				<?php get_template_part( 'components/footer/copyright' ) ?>
 			</div>

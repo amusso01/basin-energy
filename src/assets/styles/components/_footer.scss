@@ -1,3 +1,116 @@
 footer.site-footer {
-	background-color: $color__footerBg;
+  background-color: $color__footerBg;
+  padding: 80px 0px 25px;
+}
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 15px;
+  row-gap: 50px;
+  margin-bottom: 60px;
+  justify-items: center;
+  @media #{$breakpoint-sm-up} {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    justify-items: start;
+  }
+  h5 {
+    color: $color__bright;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+  p {
+    color: $color__grey;
+    font-size: 16px;
+  }
+  a {
+    font-size: 16px;
+  }
+  .address {
+    margin-bottom: 20px;
+  }
+  .site-footer__center,
+  .site-footer__right {
+    text-align: center;
+    @media #{$breakpoint-sm-up} {
+      text-align: left;
+    }
+  }
+  .site-footer__right {
+    > a {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    > p {
+      margin-bottom: 8px;
+    }
+    .site-footer__social {
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        @media #{$breakpoint-sm-up} {
+          justify-content: flex-start;
+        }
+        li {
+          margin-right: 10px;
+          &:last-of-type {
+            margin-right: 0px;
+          }
+          svg {
+            transition: 0.3s;
+          }
+          &:hover {
+            svg {
+              path {
+                fill: $color__bright;
+              }
+              circle {
+                fill: $color__main;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.site-footer__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @media #{$breakpoint-sm-up} {
+    justify-content: space-between;
+  }
+  p,
+  a {
+    color: $color__grey;
+    font-size: 13px;
+  }
+  .site-footer__legal-nav {
+    margin-left: 20px;
+    ul {
+      display: flex;
+      li {
+        padding-right: 5px;
+        position: relative;
+        &:last-of-type {
+          padding-left: 7px;
+          &::before {
+            @include pseudo;
+            left: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background-color: $color__grey;
+          }
+        }
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }
