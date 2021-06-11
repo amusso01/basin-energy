@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.279" height="14.611" viewBox="0 0 20.279 14.611">
+  <g id="down-arrow" transform="translate(-826.039 -49)">
+    <g id="spacer" transform="translate(826.039 49)" fill="rgba(255,255,255,0)" stroke="rgba(0,0,0,0)" stroke-width="1">
+      <rect width="20.279" height="14.611" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19.279" height="13.611" fill="none"/>
+    </g>
+    <g id="down-arrow-2" data-name="down-arrow" transform="translate(831.039 54)">
+      <path id="Path_3251" data-name="Path 3251" d="M-2790.979,54l5.187,4.611L-2780.7,54" transform="translate(2790.979 -54)" fill="none" stroke="#1ba0fc" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
