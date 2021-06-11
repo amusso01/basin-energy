@@ -60,7 +60,7 @@ add_action( 'init', 'wpseed_register_theme_menus');
   5.0 SETUP LOGIN PAGE 
 ==================================================================================*/
 
-$gFontUrl = "https://fonts.googleapis.com/css?family=Girassol&display=swap";
-$fontFamily = "'Girassol', cursive";
-$customLogo = get_stylesheet_directory_uri()."/dist/images/foundry-logo.svg";
-$mainColor = "#ff0000";
+$gFontUrl = "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
+$fontFamily = "'Montserrat', sans-serif";
+$customLogo = get_stylesheet_directory_uri()."/dist/images/logo.svg";
+$mainColor = "#1BA0FC";
