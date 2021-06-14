@@ -17,5 +17,10 @@
 @import "components/nav";
 @import "components/footer";
 @import "components/header";
+@import "components/side-menu";
+
+// Blocks
+@import "blocks/doc-download.scss";
 
 // Templates
+@import "templates/side";

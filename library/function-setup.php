@@ -50,7 +50,9 @@ $GTM_id = '';
 function wpseed_register_theme_menus() {
   register_nav_menus([
     'mainmenu' => __('Main menu'),
-    'footermenu' => __('Footer menu')
+    'footermenu' => __('Footer menu'),
+    'about' => __('About side menu'),
+    'investorsmenu' => __('Investors side menu'),
   ]);
 }
 add_action( 'init', 'wpseed_register_theme_menus');

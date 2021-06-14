@@ -12,39 +12,42 @@ function ea_setup() {
 		array(
 			'name'  => __( 'Blue', 'ea-starter' ),
 			'slug'  => 'blue',
-			'color'	=> '#165F97',
+			'color'	=> '#1BA0FC',
 		),
 		array(
-			'name'  => __( 'Orange', 'ea-starter' ),
-			'slug'  => 'orange',
-			'color' => '#F7931C',
+			'name'  => __( 'Text dark', 'ea-starter' ),
+			'slug'  => 'text',
+			'color' => '#3E4C5A',
+		),
+		array(
+			'name'  => __( 'Header dark', 'ea-starter' ),
+			'slug'  => 'footerBg',
+			'color' => '#00192D',
 		),
 	) );
 }
 add_action( 'after_setup_theme', 'ea_setup' );
 
 /*==================================================================================
-Allow certain block on Guttenberg
+Register new category in guttenberg block
 ==================================================================================*/
- 
-/* function misha_allowed_block_types( $allowed_blocks ) {
- 
-	return array(
-		'acf/fd-greybgtext',
-		'acf/fd-sharetitle',
-		'acf/fd-bluebg',
-		'acf/fd-button',
-		'acf/fd-teamcard',
-		'acf/fd-imagetext',
-		'acf/mediatextareablock',
-		'core/image',
-		'core/separator',
-		'core/spacer',
-		'core/paragraph',
-		'core/heading',
-		'core/list'
-	);
- 
-}
 
-add_filter( 'allowed_block_types', 'misha_allowed_block_types' );*/
+function my_foundry_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'fd-category',
+				'title' => __( 'FD Category', 'fd-category' ),
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'my_foundry_category', 10, 2);
+
+
+/*==================================================================================
+LOAD CUSTOM ACF-GUTENBERG-BLOCKS
+==================================================================================*/
+require get_template_directory().'/template-parts/blocks/block-documents.php';
+

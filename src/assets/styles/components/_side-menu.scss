@@ -1,0 +1,57 @@
+.side-menu__side-bar {
+  padding: 45px 50px;
+  position: relative;
+  background-color: $color__bright;
+  top: -50px;
+  z-index: 2;
+  h5 {
+    color: $color__main;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+  }
+  .aside-menu {
+    margin-bottom: 45px;
+    .menu-item {
+      padding: 20px 0px;
+      border-bottom: 1px solid #b9c9d6;
+      a {
+        color: $color__text;
+      }
+      &.current-menu-item {
+        position: relative;
+        a {
+          color: $color__footerBg;
+          &:after {
+            @include pseudo;
+            width: 18px;
+            height: 15px;
+            background-image: url("./../images/carret.svg");
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%) rotate(270deg);
+          }
+        }
+      }
+    }
+  }
+  .side-investor {
+    > img {
+      margin-bottom: 20px;
+      border-radius: 50%;
+      max-width: 55%;
+    }
+    > p {
+      padding-bottom: 3px;
+    }
+    .title {
+      margin-bottom: 20px;
+    }
+    .name {
+      font-weight: 700;
+    }
+  }
+  .side-menu__sticky {
+    position: sticky;
+    top: 40px;
+  }
+}

@@ -44,6 +44,24 @@ $color__footerBg: var(--footer-color);
 $color__bright: #ffffff;
 $color__grey: #b9c9d6;
 
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$colors: (text, $color__text), (blue, $color__main),
+  (footerBg, $color__footerBg);
+
+/* Color Options
+--------------------------------------------- */
+
+@each $name, $color in $colors {
+  .has-#{$name}-color {
+    color: $color;
+  }
+
+  .has-#{$name}-background-color {
+    background-color: $color;
+  }
+}
+
 /*==================================================================================
   BUTTONS
 ==================================================================================*/
