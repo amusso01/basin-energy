@@ -88,7 +88,10 @@ h6 {
 
 h1,
 .h1 {
-  font-size: $text__h1;
+  font-size: 42px;
+  @media #{$breakpoint-md-up} {
+    font-size: $text__h1;
+  }
 }
 
 h2,
@@ -105,6 +108,7 @@ h4,
 .h4 {
   font-size: $text__h4;
   color: $color__text;
+  font-weight: 400;
 }
 
 h5,

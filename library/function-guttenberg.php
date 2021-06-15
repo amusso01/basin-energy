@@ -50,4 +50,5 @@ add_filter( 'block_categories', 'my_foundry_category', 10, 2);
 LOAD CUSTOM ACF-GUTENBERG-BLOCKS
 ==================================================================================*/
 require get_template_directory().'/template-parts/blocks/block-documents.php';
+require get_template_directory().'/template-parts/blocks/block-boards.php';
 

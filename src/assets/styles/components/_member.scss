@@ -1,0 +1,35 @@
+#blockBoard {
+  padding: 50px 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 40px;
+  row-gap: 30px;
+  border-bottom: 1px solid $color__grey;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  @media #{$breakpoint-sm-up} {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .role {
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: $color__footerBg;
+    font-size: 18px;
+  }
+  .excerpt {
+    margin-bottom: 18px;
+  }
+  & + p,
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    margin-top: 35px;
+    @media #{$breakpoint-sm-up} {
+      margin-top: 50px;
+    }
+  }
+}

@@ -1,16 +1,30 @@
 .side-menu__side-bar {
-  padding: 45px 50px;
-  position: relative;
+  padding: 45px 0px;
+  position: static;
   background-color: $color__bright;
-  top: -50px;
   z-index: 2;
+  border-top: 2px solid $color__grey;
+  @media #{$breakpoint-md-up} {
+    border-top: none;
+    padding: 45px 50px;
+    position: relative;
+    top: -50px;
+  }
   h5 {
     color: $color__main;
     margin-bottom: 80px;
     text-transform: uppercase;
+    display: none;
+    @media #{$breakpoint-md-up} {
+      display: block;
+    }
   }
   .aside-menu {
     margin-bottom: 45px;
+    display: none;
+    @media #{$breakpoint-md-up} {
+      display: block;
+    }
     .menu-item {
       padding: 20px 0px;
       border-bottom: 1px solid #b9c9d6;
@@ -39,9 +53,27 @@
       margin-bottom: 20px;
       border-radius: 50%;
       max-width: 55%;
+      margin-right: auto;
+      margin-left: auto;
+      @media #{$breakpoint-md-up} {
+        max-width: 55%;
+        margin-right: 0;
+        margin-left: 0;
+      }
     }
     > p {
       padding-bottom: 3px;
+      text-align: center;
+      @media #{$breakpoint-md-up} {
+        text-align: left;
+      }
+    }
+    > a {
+      text-align: center;
+      display: block;
+      @media #{$breakpoint-md-up} {
+        text-align: left;
+      }
     }
     .title {
       margin-bottom: 20px;
@@ -51,7 +83,9 @@
     }
   }
   .side-menu__sticky {
-    position: sticky;
-    top: 40px;
+    @media #{$breakpoint-md-up} {
+      position: sticky;
+      top: 40px;
+    }
   }
 }
