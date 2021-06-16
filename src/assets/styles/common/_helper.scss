@@ -11,6 +11,16 @@
     padding: 0 3.2rem;
   }
 }
+.content-block-smaller {
+  //create the "container" with this applied to any row or any 100% width element
+  padding: 0 1rem;
+  @media #{$breakpoint-sm-up} {
+    padding: 0 3rem;
+  }
+  @media #{$breakpoint-md-up} {
+    padding: 0 6.5rem;
+  }
+}
 
 .noscroll {
   overflow: hidden;

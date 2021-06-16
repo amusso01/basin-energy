@@ -19,9 +19,11 @@
 @import "components/header";
 @import "components/side-menu";
 @import "components/member";
+@import "components/side-cards";
 
 // Blocks
 @import "blocks/doc-download.scss";
 
 // Templates
 @import "templates/side";
+@import "templates/index";

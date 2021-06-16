@@ -1,0 +1,45 @@
+.aside-card {
+  min-height: 350px;
+  background-size: cover;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  &:hover {
+    .hover {
+      top: 0px;
+      right: 0px;
+      opacity: 1;
+    }
+  }
+  .hover {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    opacity: 0;
+    transition: opacity 0.3s, top 0.5s, right 0.5s;
+  }
+  .overlayText {
+    padding: 20px 25px;
+    p {
+      font-size: 33px;
+      font-weight: 700;
+      color: $color__bright;
+    }
+    &.has-image {
+      background-color: #f5f7fc;
+      width: 100%;
+      padding: 10px 15px;
+      p {
+        font-size: 18px;
+        color: $color__footerBg;
+        &.read-more {
+          color: $color__main;
+          font-size: 17px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import lozad from "lozad";
 import hamburger from "./../part/hamburger";
 import dropdown from "../part/dropdown";
 import search from "../part/search";
+import postFilter from "../part/postFilter";
 
 export default {
 	init() {
@@ -23,6 +24,13 @@ export default {
 		// Lazy load image with lozad.js https://github.com/ApoorvSaxena/lozad.js
 		const observer = lozad();
 		observer.observe();	
+
+		const catMenu = document.getElementById('categoryMenu');
+		if (typeof(catMenu ) != 'undefined' && catMenu  != null)
+		{
+			postFilter();
+		}
+
 	},
 
 	finalize() {

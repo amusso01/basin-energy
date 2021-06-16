@@ -49,8 +49,8 @@ get_header();
 	</aside>
 
 	<section class="side-menu__content member__content">
-	<h1><?php echo get_the_title() ?></h1>
-			<p class="role"><?php echo $role ?></p>
+		<h1><?php echo get_the_title() ?></h1>
+		<p class="role"><?php echo $role ?></p>
 		<div class="image">
 			<img src="<?php echo $picture ?>" alt="<?php echo get_the_title() ?> Picture">
 		</div>

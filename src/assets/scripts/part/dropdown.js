@@ -6,6 +6,15 @@ export default function dropdown(){
     const parent = document.querySelectorAll('.menu-item-has-children');
 
     parent.forEach((link)=>{
+        link.addEventListener('click', ()=>{
+           let firstAnchor = link.querySelector('> a');
+           firstAnchor.addEventListener('click', e=>{
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+           })
+
+        })
   
         link.addEventListener('mouseenter', (el)=>{
             clearTimeout(menuLeaveTimer);
