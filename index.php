@@ -70,6 +70,10 @@ $cats = get_terms(array(
 						<div class="news-content">
 							<p><?php echo get_the_excerpt( $postId ) ?>  <span><?php get_template_part( 'svg-template/svg', 'circle-news' ) ?></span></p>
 						</div>
+
+						<div class="date">
+							<p><?php echo get_the_date( 'd M Y' ) ?></p>
+						</div>
 				
 					</a>
 				</article>

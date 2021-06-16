@@ -67,6 +67,8 @@
         display: none;
         opacity: 0;
         transition: 0.3s;
+        padding: 20px 0px;
+        border-bottom: 1px solid $color__grey;
         &.active {
           opacity: 1;
           display: block;
@@ -75,14 +77,19 @@
           > p {
             display: flex;
             justify-content: space-between;
-
             align-items: center;
-            padding: 20px 0px;
-            border-bottom: 1px solid $color__grey;
+            color: $color__footerBg;
+
             span {
               display: inline-block;
               margin-left: 50px;
             }
+          }
+        }
+        .date {
+          margin-top: 20px;
+          p {
+            font-size: 14px;
           }
         }
       }
