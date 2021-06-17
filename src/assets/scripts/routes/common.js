@@ -4,6 +4,7 @@ import hamburger from "./../part/hamburger";
 import dropdown from "../part/dropdown";
 import search from "../part/search";
 import postFilter from "../part/postFilter";
+import share from "../part/share";
 
 export default {
 	init() {
@@ -29,6 +30,12 @@ export default {
 		if (typeof(catMenu ) != 'undefined' && catMenu  != null)
 		{
 			postFilter();
+		}
+
+		const shareSection = document.getElementById('share');
+		if (typeof(shareSection ) != 'undefined' && shareSection  != null)
+		{
+			share();
 		}
 
 	},

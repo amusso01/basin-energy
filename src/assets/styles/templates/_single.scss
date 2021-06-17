@@ -1,0 +1,125 @@
+.index-single {
+  &-grid__container {
+    .news-container {
+      .back {
+        margin-bottom: 20px;
+        display: block;
+        &-end {
+          margin-top: 40px;
+          display: none;
+          @media #{$breakpoint-md-up} {
+            display: inline-block;
+          }
+        }
+        &:hover {
+          color: $color__main;
+          text-decoration: underline;
+        }
+        svg {
+          position: relative;
+          top: 3px;
+        }
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 52px;
+        margin-bottom: 22px;
+      }
+      .share-icon {
+        margin-bottom: 40px;
+        height: 0px;
+        opacity: 0;
+        transition: opacity 0.3s, height 0.5s;
+        &.active {
+          opacity: 1;
+          height: 17px;
+        }
+        ul {
+          display: flex;
+          li {
+            margin-right: 10px;
+            &:last-of-type {
+              margin-right: 0px;
+            }
+            svg {
+              transition: 0.4s;
+              width: 33px;
+            }
+            &:hover {
+              svg {
+                path {
+                  fill: $color__bright;
+                }
+                circle {
+                  fill: $color__main;
+                }
+              }
+            }
+          }
+        }
+      }
+      .share-date {
+        margin-bottom: 15px;
+        font-size: 16px;
+        #share {
+          margin-right: 15px;
+          display: inline-block;
+          &:hover {
+            cursor: pointer;
+          }
+          svg {
+            position: relative;
+            top: 4px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+    .side-cards {
+      .side-news {
+        margin-bottom: 60px;
+        .title {
+          font-size: 15px;
+          font-weight: 700;
+          color: $color__footerBg;
+          margin-bottom: 10px;
+        }
+        .fd-single-news {
+          padding: 15px 0px 25px;
+          border-bottom: 1px solid $color__grey;
+          &:hover {
+            .news-content {
+              > p {
+                color: $color__main;
+              }
+            }
+          }
+        }
+        .news-content {
+          > p {
+            color: $color__footerBg;
+            font-size: 17px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $color__footerBg;
+            font-weight: 700;
+            span {
+              display: inline-block;
+              margin-left: 3px;
+              > svg {
+                width: 38px;
+              }
+            }
+          }
+        }
+        .date {
+          > p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

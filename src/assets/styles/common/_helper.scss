@@ -34,3 +34,17 @@
   max-width: 100%;
   height: auto;
 }
+
+ul.list {
+  list-style-position: inside;
+  list-style: none;
+  li {
+    &:before {
+      content: "•";
+      font-size: 18px;
+      color: $color__main;
+      display: inline-block;
+      width: 1em;
+    }
+  }
+}

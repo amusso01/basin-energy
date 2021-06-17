@@ -61,8 +61,6 @@ $cats = get_terms(array(
 			if ( $the_query->have_posts() ) :
 				while ( $the_query->have_posts() ) : $the_query->the_post(); 
 				$postId = $the_query->post->ID; 
-
-				
 			
 				?>
 				<article  <?php post_class('fd-single-news active'); ?>>
