@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<main role="main" class="site-main page-main">
+<main role="main" class="site-main content-block-smaller page-main">
 <?php
 
 if ( have_posts() ) :

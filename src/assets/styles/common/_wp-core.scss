@@ -140,3 +140,33 @@ a img.aligncenter {
     padding: 12px 0px;
   }
 }
+h1.has-background,
+h2.has-background,
+h3.has-background,
+h4.has-background,
+h5.has-background,
+h6.has-background,
+p.has-background,
+a.has-background {
+  padding: 4px 1.15em;
+}
+p.has-background {
+  &:last-of-type {
+    padding-bottom: 15px;
+  }
+}
+
+h1.has-background,
+h2.has-background,
+h3.has-background,
+h4.has-background,
+h5.has-background,
+h6.has-background {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.wp-block-column {
+  margin-bottom: 5px;
+  padding: 20px 0px;
+}

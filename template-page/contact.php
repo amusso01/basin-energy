@@ -17,16 +17,16 @@ $cards = get_field('cards', $page_for_posts);
 
 get_header();
 ?>
-<section class="hero side-menu__hero" style="background-image:url('<?php echo get_the_post_thumbnail_url( $page_for_posts ) ?>')">
+<section class="hero side-menu__hero" style="background-image:url('<?php echo get_the_post_thumbnail_url() ?>')">
 
 </section>
 
-<main role="main" class=" main index-main  contact-main content-block-smaller">
+<main role="main" class=" main contact-main content-block-smaller">
 
 
 <h1>Get in touch</h1>
 
-<div class="index-grid__container contact-container" >
+<div class="contact-grid__container contact-container" >
 	<section class="news-container">
 	
 

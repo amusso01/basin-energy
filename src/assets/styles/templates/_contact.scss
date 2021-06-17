@@ -1,0 +1,91 @@
+.contact-main {
+  margin-top: 70px;
+  margin-bottom: 90px;
+  h1 {
+    font-size: 50px;
+  }
+  .contact-grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 100px;
+    @media #{$breakpoint-md-up} {
+      grid-template-columns: 2.3fr 1fr;
+      column-gap: 100px;
+    }
+    .side-cards {
+      display: none;
+      @media #{$breakpoint-md-up} {
+        display: block;
+      }
+    }
+  }
+  .wpcf7-form {
+    input[type="submit"] {
+      border: none;
+      border-radius: 30px;
+      color: $color__bright;
+      background-color: $color__main;
+      padding: 15px 45px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        background-color: $color__link-hover;
+      }
+    }
+    .acceptance {
+      font-size: 13px;
+      a {
+        font-size: 13px;
+      }
+    }
+    .form-row {
+      margin-bottom: 20px;
+      input,
+      textarea {
+        width: 100%;
+      }
+
+      select {
+        option {
+          &:first-of-type {
+            color: #b9c9d6;
+          }
+        }
+      }
+      input,
+      select,
+      textarea {
+        border: none;
+        border-bottom: 1px solid $color__grey;
+        padding: 5px;
+        &::placeholder {
+          color: #b9c9d6;
+        }
+        &:active,
+        &:focus {
+          border-bottom-color: $color__main;
+        }
+      }
+      textarea {
+        height: 6em;
+        &::placeholder {
+          color: #b9c9d6;
+        }
+      }
+
+      &.row-split {
+        display: flex;
+        > label {
+          select {
+            min-width: 130px;
+          }
+        }
+        .name {
+          flex-basis: 100%;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

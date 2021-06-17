@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<main class="main site-search" role="main" >
+<main class="main site-search content-block-smaller" role="main" >
 
 	<?php if ( have_posts() ) : ?>
 

@@ -24,6 +24,11 @@ function ea_setup() {
 			'slug'  => 'footerBg',
 			'color' => '#00192D',
 		),
+		array(
+			'name'  => __( 'Grey', 'ea-starter' ),
+			'slug'  => 'grey',
+			'color' => '#F5F7FC',
+		),
 	) );
 }
 add_action( 'after_setup_theme', 'ea_setup' );
