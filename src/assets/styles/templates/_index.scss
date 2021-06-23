@@ -36,7 +36,7 @@
         }
         &.active {
           color: $color__footerBg;
-          border: 1px solid #f5f7fc;
+          border: 1px solid $color__grey;
           border-bottom: 2px solid $color__main;
           background-color: #f5f7fc;
         }
@@ -79,10 +79,17 @@
             justify-content: space-between;
             align-items: center;
             color: $color__footerBg;
-
+            font-size: 22px;
+            transition: 0.3s;
             span {
               display: inline-block;
-              margin-left: 50px;
+              margin-left: 15px;
+              @media #{$breakpoint-md-up} {
+                margin-left: 50px;
+              }
+              > svg {
+                transition: 0.4s;
+              }
             }
           }
         }
@@ -90,6 +97,18 @@
           margin-top: 20px;
           p {
             font-size: 14px;
+          }
+        }
+        &:hover {
+          .news-content {
+            > p {
+              color: $color__main;
+              span {
+                > svg {
+                  transform: rotate(45deg);
+                }
+              }
+            }
           }
         }
       }

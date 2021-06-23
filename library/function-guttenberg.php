@@ -56,4 +56,5 @@ LOAD CUSTOM ACF-GUTENBERG-BLOCKS
 ==================================================================================*/
 require get_template_directory().'/template-parts/blocks/block-documents.php';
 require get_template_directory().'/template-parts/blocks/block-boards.php';
+require get_template_directory().'/template-parts/blocks/block-advisers.php';
 

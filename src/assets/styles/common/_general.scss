@@ -25,6 +25,7 @@ ul,
 li,
 ol {
   color: $color__text;
+  line-height: 30px;
 }
 
 em,
@@ -60,6 +61,7 @@ a {
   text-decoration: none;
   font-size: $text__p;
   transition: color 0.3s;
+  line-height: 30px;
   &:hover {
     color: $color__link-hover;
   }
@@ -84,13 +86,16 @@ h6 {
   margin: 0px;
   font-family: $header__fontname;
   color: $color__footerBg;
+  font-weight: 500;
 }
 
 h1,
 .h1 {
-  font-size: 42px;
+  font-size: 47px;
+  line-height: 48px;
   @media #{$breakpoint-md-up} {
     font-size: $text__h1;
+    line-height: 53px;
   }
 }
 

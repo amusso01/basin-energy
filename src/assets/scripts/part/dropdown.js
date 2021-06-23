@@ -36,6 +36,17 @@ export default function dropdown(){
             }, hideDelay);
       
         })
+
+        link.addEventListener('touchstart', (el)=>{
+            
+            let submenu = link.querySelector('.sub-menu');
+            if(!el.path.includes(submenu)){
+                link.classList.toggle('sub-menu-open')
+                let submenu = link.querySelector('.sub-menu');
+                submenu.classList.toggle('open')
+            }
+            
+        })
        
     })
 

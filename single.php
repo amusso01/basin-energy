@@ -13,6 +13,7 @@ $args = array(
 	'post_type' 		=> 'post',
 	'post_status'		=> 'publish',
 	'posts_per_page' 	=> 3,
+	'category_name'     => 'all-news',
 	'orderby' 			=> 'date',
 	'order' 			=> 'DESC',
 );

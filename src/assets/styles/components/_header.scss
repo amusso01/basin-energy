@@ -2,6 +2,8 @@
   background-color: $color__bright;
   position: relative;
   border-bottom: 1px solid $color__grey;
+  position: relative;
+  z-index: 9;
   &__inner {
     display: flex;
     align-items: center;
@@ -33,14 +35,17 @@
     z-index: 10;
     background-color: white;
     transition: opacity 0.3s, left 0.5s;
+    pointer-events: none;
     &.active {
       left: 0px;
       opacity: 1;
+      pointer-events: all;
     }
     @media #{$breakpoint-md-up} {
       display: block;
       flex-grow: 2;
       position: static;
+      pointer-events: all;
       z-index: 0;
       opacity: 1;
       width: auto;
@@ -57,23 +62,32 @@
     .menu-item {
       padding: 20px 6px;
       margin-left: 25px;
-      margin-right: 40px;
+      margin-right: 35px;
       position: relative;
       border-bottom: 1px solid $color__grey;
 
       @media #{$breakpoint-md-up} {
-        margin-left: 60px;
+        margin-left: 35px;
         padding: 50px 0px;
         border-bottom: none;
         &:first-of-type {
           margin-left: 0px;
         }
+        &.current_page_item,
+        &.current-menu-parent {
+          a {
+            &:before {
+              width: 100%;
+            }
+          }
+        }
       }
       a {
-        font-weight: 700;
+        font-weight: 500;
         color: $color__footerBg;
         text-transform: uppercase;
         font-size: 15px;
+        letter-spacing: 1px;
         position: relative;
         @media #{$breakpoint-md-up} {
           &:before {
@@ -92,8 +106,19 @@
         }
       }
       &.menu-item-has-children {
+        position: relative;
+        z-index: 9;
+        &.sub-menu-open {
+          a {
+            &::after {
+              transition: 0.3s;
+              transform: translateY(-50%) rotate(-90deg);
+            }
+          }
+        }
         a {
           &::after {
+            transition: 0.3s;
             @include pseudo;
             background-image: url("./../images/carret.svg");
             width: 18px;
@@ -107,7 +132,7 @@
       }
       //   SUBMENU
       .sub-menu {
-        z-index: 9;
+        z-index: 10;
         background-color: $color__bright;
         pointer-events: none;
         opacity: 0;
@@ -115,6 +140,7 @@
         padding: 10px 0px 0px;
         height: 0px;
         @media #{$breakpoint-md-up} {
+          z-index: 10;
           position: absolute;
           border: 1px solid $color__grey;
           top: 125px;
@@ -125,6 +151,7 @@
           transition: opacity 0.4s;
         }
         .menu-item {
+          position: relative;
           margin-left: 0px;
           padding: 10px 0px;
           border-bottom: none;
@@ -199,13 +226,15 @@
   &__search-container {
     background-color: $color__footerBg;
     width: 100%;
-    padding: 6px 0px 20px;
+    padding: 16px 0px 27px;
     display: flex;
     justify-content: center;
     position: absolute;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s;
+    z-index: 0;
+    bottom: -66px;
     @media #{$breakpoint-md-up} {
       padding: 40px 20px 25px;
       opacity: 0;
@@ -213,7 +242,6 @@
       bottom: -50px;
       left: 0px;
       width: 100%;
-      z-index: 8;
     }
     &.search-active {
       pointer-events: all;

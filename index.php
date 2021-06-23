@@ -40,9 +40,10 @@ $cats = get_terms(array(
 ?>
 
 <ul class="cat-menu" id="categoryMenu">
-	<li class="cat-link"><a class='active' href="#" data-slug="all">ALL NEWS</a> </li>
-	<?php foreach($cats as $cat) : ?>
-	<li class="cat-link"><a href="#"  data-slug="category-<?php echo $cat->slug ?>" data-id="<?php echo $cat->term_id ?>"><?php echo $cat->name ?></a> </li>
+	<!-- <li class="cat-link"><a class='active' href="#" data-slug="all">ALL NEWS</a> </li> -->
+	<?php foreach($cats as $key=>$cat) : ?>
+
+	<li class="cat-link"><a href="#" class="<?php echo $key === 0 ? 'active' : '' ?>" data-name="<?php echo $cat->name ?>"  data-slug="category-<?php echo $cat->slug ?>" data-id="<?php echo $cat->term_id ?>"><?php echo $cat->name ?></a> </li>
 	<?php endforeach; ?>
 </ul>
 
@@ -61,10 +62,16 @@ $cats = get_terms(array(
 			if ( $the_query->have_posts() ) :
 				while ( $the_query->have_posts() ) : $the_query->the_post(); 
 				$postId = $the_query->post->ID; 
-			
+
+				$isPDF = get_field('is_pdfdoc_news' , $postId);
+
+				if($isPDF):
+					$pdfLink = get_field('link', $postId);
+				endif;
+
 				?>
 				<article  <?php post_class('fd-single-news active'); ?>>
-					<a href="<?php echo get_the_permalink($postId) ?>">
+					<a href="<?php echo $isPDF ? $pdfLink : get_the_permalink($postId) ?>" <?php echo $isPDF ? 'target="_blank" rel="noopener noreferrer"' : '' ?>>
 						<div class="news-content">
 							<p><?php echo get_the_excerpt( $postId ) ?>  <span><?php get_template_part( 'svg-template/svg', 'circle-news' ) ?></span></p>
 						</div>

@@ -1,0 +1,323 @@
+.home__hero {
+  background-size: cover;
+  min-height: 655px;
+  background-position: center;
+  z-index: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  @media #{$breakpoint-sm-up} {
+    align-items: center;
+  }
+  .hero-container {
+    z-index: 0;
+  }
+  .overlay-text {
+    padding: 0 1rem;
+    @media #{$breakpoint-sm-up} {
+      padding: 0 3rem 40px;
+    }
+    @media #{$breakpoint-md-up} {
+      padding: 0 6.5rem 50px;
+    }
+    h1 {
+      color: $color__bright;
+      font-size: 48px;
+      line-height: 50px;
+      padding-top: 25px;
+      @media #{$breakpoint-md-up} {
+        font-size: 50px;
+        line-height: 52px;
+        padding-top: 0px;
+      }
+    }
+    .subheading {
+      color: $color__bright;
+      font-size: 38px;
+      line-height: 42px;
+      margin-bottom: 40px;
+      font-weight: 300;
+      @media #{$breakpoint-md-up} {
+        font-size: 50px;
+        line-height: 52px;
+      }
+    }
+    > a {
+      border-radius: 30px;
+      border: 1px solid $color__main;
+      padding: 15px 20px;
+      color: $color__bright;
+      display: inline-block;
+      z-index: 5;
+      position: relative;
+      transition: 0.3s;
+      &:hover {
+        background-color: $color__main;
+      }
+    }
+  }
+  .btn-group {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    // display: none;
+    @media #{$breakpoint-md-up} {
+      display: flex;
+    }
+    .button-single {
+      padding: 25px 60px;
+      background-color: $color__footerBg;
+      min-width: 100%;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      @media #{$breakpoint-md-up} {
+        padding: 40px 60px;
+        min-width: 337px;
+      }
+      &:last-of-type {
+        background-color: #f5f7fc;
+        > p {
+          color: $color__footerBg;
+        }
+      }
+      &:hover {
+        .overlay {
+          top: 0px;
+          right: 0px;
+          opacity: 1;
+        }
+      }
+      > p {
+        font-weight: 500;
+        color: $color__bright;
+      }
+      .overlay {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        opacity: 0;
+        transition: opacity 0.3s, top 0.5s, right 0.5s;
+      }
+    }
+  }
+}
+
+// EDITOR SECTION
+.editor-content {
+  margin: 100px 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 70px;
+  row-gap: 35px;
+  @media #{$breakpoint-md-up} {
+    grid-template-columns: 1fr 2.8fr;
+  }
+  .site-name {
+    font-size: 33px;
+    color: $color__footerBg;
+    font-weight: 500;
+    line-height: 33px;
+    span {
+      font-weight: 300;
+    }
+  }
+}
+
+// KEY ANNOUNCEMENTS
+
+.key-announcements {
+  background-color: #f5f7fc;
+  padding: 95px 0px;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 100px;
+    @media #{$breakpoint-md-up} {
+      grid-template-columns: 3fr 1fr;
+    }
+  }
+  h2 {
+    margin-bottom: 45px;
+  }
+  .fd-single-news {
+    transition: 0.3s;
+    padding: 20px 0px;
+    border-bottom: 1px solid $color__grey;
+    .news-content {
+      > p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color__footerBg;
+        font-size: 22px;
+        transition: 0.3s;
+        span {
+          display: inline-block;
+          margin-left: 15px;
+          @media #{$breakpoint-md-up} {
+            margin-left: 50px;
+          }
+          > svg {
+            transition: 0.4s;
+          }
+        }
+      }
+    }
+    .date {
+      margin-top: 20px;
+      p {
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      .news-content {
+        > p {
+          color: $color__main;
+          span {
+            > svg {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .report {
+    margin-top: 60px;
+    img {
+      margin: auto;
+    }
+    > a {
+      padding: 20px 10px;
+      background-color: $color__bright;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      color: $color__footerBg;
+      font-weight: 500;
+      span {
+        font-weight: 400;
+        color: $color__main;
+        display: block;
+      }
+      &:hover {
+        color: $color__footerBg;
+        .overlay {
+          top: 0px;
+          right: 0px;
+          opacity: 1;
+        }
+      }
+      .overlay {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        opacity: 0;
+        transition: opacity 0.3s, top 0.5s, right 0.5s;
+      }
+    }
+  }
+}
+
+// CARD SECTION
+.homepage-main {
+  .cards-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    @media #{$breakpoint-md-up} {
+      grid-template-columns: 2fr 1fr 1.3fr;
+    }
+    > a {
+      min-height: 206px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+
+      @media #{$breakpoint-md-up} {
+        min-height: 436px;
+      }
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+        .hover {
+          opacity: 1;
+          top: 0;
+          right: 0;
+        }
+      }
+      .hover {
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        opacity: 0;
+        transition: opacity.3s, top 0.4s, right 0.4s;
+      }
+      .white {
+        color: $color__bright;
+        position: absolute;
+        bottom: 0;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 40px 30px;
+        line-height: 33px;
+      }
+      .single-card__text {
+        background-color: $color__bright;
+        min-height: 130px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        padding: 40px 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 25px;
+        height: 100%;
+        align-content: center;
+        @media #{$breakpoint-md-up} {
+          height: auto;
+          display: grid;
+          grid-template-columns: 1fr 3fr;
+        }
+
+        > p {
+          &:first-of-type {
+            font-weight: 500;
+            color: $color__footerBg;
+            margin-bottom: 3px;
+            font-size: 18px;
+            > span {
+              display: none;
+              font-weight: 400;
+              color: $color__main;
+              font-size: 17px;
+              &.display {
+                display: block;
+              }
+              @media #{$breakpoint-md-up} {
+                display: block;
+              }
+            }
+            &.span-full {
+              grid-column: 1 / -1;
+            }
+          }
+          &.read-more-mobile {
+            display: block;
+            color: $color__main;
+            margin-top: 8px;
+            @media #{$breakpoint-md-up} {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

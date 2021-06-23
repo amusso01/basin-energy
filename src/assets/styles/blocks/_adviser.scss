@@ -1,0 +1,25 @@
+.block-adviser {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  column-gap: 15px;
+  padding: 60px 0px 30px;
+  border-bottom: 2px solid #f5f7fc;
+  @media #{$breakpoint-md-up} {
+    column-gap: 50px;
+  }
+  .adviser-bio {
+    padding-top: 10px;
+    h2 {
+      line-height: 33px;
+    }
+    .role {
+      color: $color__footerBg;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 17px;
+    }
+    .address {
+      line-height: 25px;
+    }
+  }
+}
