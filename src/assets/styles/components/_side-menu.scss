@@ -51,6 +51,35 @@
         }
       }
     }
+    .sub-menu {
+      margin-top: 15px;
+      .menu-item {
+        padding: 2px 0px;
+        border-bottom: none;
+        a {
+          color: $color__text;
+          transition: 0.3s;
+          &:hover {
+            color: #00192d;
+          }
+        }
+        &.current-menu-item {
+          position: relative;
+          a {
+            color: $color__footerBg;
+            &:after {
+              @include pseudo;
+              width: 18px;
+              height: 15px;
+              background-image: url("./../images/carret.svg");
+              right: 0px;
+              top: 50%;
+              transform: translateY(-50%) rotate(270deg);
+            }
+          }
+        }
+      }
+    }
   }
   .side-investor {
     > img {

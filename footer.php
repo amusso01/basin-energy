@@ -68,7 +68,7 @@ if(get_theme_mod( 'linkedin')){
 				<div class="site-footer__social">
 					<ul>
 					<?php foreach($social as $key => $link) : ?>
-						<li><a href="" rel="noopener noreferrer" target="_blank" href="<?php echo $link ?>"><?php get_template_part( 'svg-template/svg', $key ) ?></a></li>
+						<li><a rel="noopener noreferrer" target="_blank" href="<?php echo $link ?>"><?php get_template_part( 'svg-template/svg', $key ) ?></a></li>
 					<?php endforeach; ?>
 					</ul>
 				</div>

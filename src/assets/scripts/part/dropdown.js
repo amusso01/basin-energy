@@ -3,7 +3,7 @@ export default function dropdown(){
     let showDelay = 100, hideDelay = 200;
     let menuEnterTimer, menuLeaveTimer;
 
-    const parent = document.querySelectorAll('.menu-item-has-children');
+    const parent = document.querySelectorAll('#menu_main .menu-item-has-children');
 
 
     parent.forEach((link)=>{
