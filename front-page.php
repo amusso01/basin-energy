@@ -43,7 +43,7 @@ get_header();
 			<a class="button-single" href="<?php echo $heroBtngroup['blue_button']['url'] ?>">
 				<div class="overlay"><?php get_template_part( 'svg-template/svg', 'hover' ) ?></div>
 				<p><?php echo $heroBtngroup['blue_button']['title'] ?></p>	
-				<span>View all</span>
+				<span>Read more</span>
 			</a>
 			<a class="button-single" href="<?php echo $heroBtngroup['white_button']['url'] ?>">
 				<div class="overlay"><?php get_template_part( 'svg-template/svg', 'hover' ) ?></div>
@@ -60,7 +60,7 @@ get_header();
 
 	<section class="editor-content content-block-smaller">
 		<div class="editor-content__container">
-			<p class="site-name">Baisn Energy <span>One</span></p>
+			<p class="site-name">Basin Energy <span>One</span></p>
 		</div>
 		<div class="editor-content__container">
 			<?php the_content() ?>
@@ -82,7 +82,7 @@ get_header();
 				<article  <?php post_class('fd-single-news active'); ?>>
 					<a href="<?php echo get_the_permalink($postId) ?>">
 						<div class="news-content">
-							<p><?php echo get_the_excerpt( $postId ) ?>  <span><?php get_template_part( 'svg-template/svg', 'circle-news' ) ?></span></p>
+							<p><?php echo get_the_title( $postId ) ?>  <span><?php get_template_part( 'svg-template/svg', 'circle-news' ) ?></span></p>
 						</div>
 
 						<div class="date">
@@ -102,6 +102,7 @@ get_header();
 
 			</div>
 			<div class="key-announcements__single">
+        <?php  if($reportImage) : ?>
 				<aside class="report">
 					<img src="<?php echo $reportImage ?>" alt="latest report">
 					<a href="<?php echo $reportLink['url']?>">
@@ -110,6 +111,7 @@ get_header();
 					<span>View</span>
 					</a>
 				</aside>
+        <?php endif; ?>
 			</div>
 		</div>
 	</section>
@@ -123,10 +125,13 @@ get_header();
 				<p class="read-more-mobile">Read more</p>
 			</div>	
 		</a>
-		<a href="<?php echo $solidCard['link']['url']  ?>" class="single-card single-card__solid" style="background-color:<?php echo  $solidCard['background_color'] ?>">
-			<div class="hover"><?php get_template_part( 'svg-template/svg', 'hover' ) ?></div>
-			<p class="white"><?php echo $solidCard['link']['title']  ?></p>
-		</a>
+		<a class="single-card single-card__solid" style="background-color:<?php echo  $solidCard['background_color'] ?>">
+			<!-- <div class="hover"><?php get_template_part( 'svg-template/svg', 'hover' ) ?></div> -->
+			<!-- <p class="white"><?php echo $solidCard['link']['title']  ?></p> -->
+      <p class="tick"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.6 25.05"><defs><style>.tick{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><title>tick</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="tick" points="1.5 13.99 11.05 23.55 33.1 1.5"/></g></g></svg> Proven industry experience</p>
+      <p class="tick"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.6 25.05"><defs><style>.tick{fill:none;stroke:#ffffff;sstroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><title>tick</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="tick" points="1.5 13.99 11.05 23.55 33.1 1.5"/></g></g></svg> Modern exploration techniques</p>
+      <p class="tick"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.6 25.05"><defs><style>.tick{fill:none;stroke:#ffffff;s;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><title>tick</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="tick" points="1.5 13.99 11.05 23.55 33.1 1.5"/></g></g></svg> Intelligent and coherent ESG approach</p>
+    </a>
 		<a href="<?php echo $smallCard['link']['url']  ?>" class="single-card single-card__small" style="background-image:url('<?php echo $smallCard['image'] ?>')">
 			<div class="hover"><?php get_template_part( 'svg-template/svg', 'hover' ) ?></div>
 			<div class="single-card__text">

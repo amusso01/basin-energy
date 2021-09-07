@@ -46,7 +46,7 @@ if(get_theme_mod( 'linkedin')){
 
 			<div class="site-footer__item site-footer__center ">
 
-				<h5>Registerd office</h5>
+				<h5>Registered office</h5>
 
 				<div class="address">
 					<p><?php echo $registerAddress ?></p>
