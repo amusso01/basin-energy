@@ -83,6 +83,7 @@ get_header();
 					<a href="<?php echo get_the_permalink($postId) ?>">
 						<div class="news-content">
 							<p><?php echo get_the_title( $postId ) ?>  <span><?php get_template_part( 'svg-template/svg', 'circle-news' ) ?></span></p>
+              <p class="news-excerpt" style="margin-top:5px;font-size:15px;"> <?php echo get_the_excerpt( $postId ) ?>  </p>
 						</div>
 
 						<div class="date">

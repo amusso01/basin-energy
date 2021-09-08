@@ -24,6 +24,7 @@ $displaySocial = get_theme_mod('display-social');
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="yuFb8ZWpKoWKKn7Q7Ea_MTKRNArkZ9ZFeD2E917PgyI" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<!--=== GMT head ===-->
 	<?php  WPSeed_gtm('head') ?>
